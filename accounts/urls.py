@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import Rest
+from .views import UserRegisterApiView
 
 urlpatterns = [
-    path("rest/", Rest.as_view()),
+    path("register/", UserRegisterApiView.as_view()),
 ]
