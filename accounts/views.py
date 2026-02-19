@@ -7,7 +7,7 @@ from .models import User
 
 class UserRegisterApiView(APIView):
     def post(self, request):
-        serializeData = UserSerializer(data=request.POST)
+        serializeData = UserSerializer(data=request.data)
         if serializeData.is_valid():
             User.objects.create_user(
                 username= serializeData.validated_data["username"],
