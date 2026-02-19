@@ -28,4 +28,4 @@ class UserLoginApiView(APIView):
             return Response({"message": "user logged in successfully"}, status=status.HTTP_200_OK)
         else:
             return Response({"error": "user does not exist"}, status=status.HTTP_401_UNAUTHORIZED)
-        
+
